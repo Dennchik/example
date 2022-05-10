@@ -1,0 +1,36 @@
+.wrapper {
+	display: grid;
+	grid-template-areas:
+		"header header header"
+		"left-menu content right-menu"
+		"footer footer footer";
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 15% 1fr 15%;
+	grid-gap: 0.5%;
+	max-width: 1300px;
+	height: 100vh;
+	border: 1px solid red;
+	margin: 0 auto;
+
+
+	&__header {border: 1px solid green;
+		grid-area: header;
+	}
+
+	&__content {border: 1px solid green;
+		grid-area: content;
+	}
+
+	&__left-menu {border: 1px solid green;
+		grid-area: left-menu;
+	}
+
+	&__right-menu {border: 1px solid green;
+		grid-area: right-menu;
+	}
+
+	&__footer {border: 1px solid green;
+		grid-area: footer;
+	}
+}
+

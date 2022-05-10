@@ -1,45 +1,10 @@
-﻿body {
+﻿@import 'null', 'grid', 'color';
+
+.logo {
+	background-image: url(../img/logotipe.png);
+	display: block;
 	width: 100%;
-	height: 100vh;
-	background-color: #101724;
-	color: #ffffff;
-	font-size: 15px;
-	line-height: 32px;
-	font-family: "Open Sans", sans-serif;
 }
 
-.wrapper {
-	display: grid;
-	grid-template-areas:
-		"header header header"
-		"right-menu content left-menu"
-		"fotter fotter fotter";
-	grid-template-rows: 15% 70% 15%;
-	grid-template-columns: 33.333% 1fr 20%;
-	grid-gap: 10px;
-	height: 100vh;
-	margin: 0;
-	border: 2px solid white;
 
-	&__header {
-		grid-area: header;
-		text-align: center;
-	}
 
-	&__right-menu {
-		grid-area: right-menu;
-	}
-
-	&__content {
-		grid-area: content;
-	}
-
-	&__left-menu {
-		grid-area: left-menu;
-	}
-
-	&__fotter {
-		border: 2px solid red;
-		grid-area: fotter;
-	}
-}

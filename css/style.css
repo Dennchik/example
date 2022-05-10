@@ -1,30 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   width: 100%;
   height: 100vh;
-  background-color: #101724;
-  color: #ffffff;
-  font-size: 15px;
+  background-color: #0b1320;
+  color: #fff;
+  font-size: 14px;
   line-height: 32px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
 
 .wrapper {
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "header header header" "right-menu content left-menu" "fotter fotter fotter";
-  grid-template-rows: 15% 70% 15%;
-  grid-template-columns: 33.333% 1fr 20%;
-  grid-gap: 10px;
+      grid-template-areas: "header header header" "left-menu content right-menu" "footer footer footer";
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+  -ms-grid-columns: 15% 1fr 15%;
+      grid-template-columns: 15% 1fr 15%;
+  grid-gap: 0.5%;
+  max-width: 1300px;
   height: 100vh;
-  margin: 0;
-  border: 2px solid white; }
-  .wrapper__header {
-    grid-area: header;
-    text-align: center; }
-  .wrapper__right-menu {
-    grid-area: right-menu; }
-  .wrapper__content {
-    grid-area: content; }
-  .wrapper__left-menu {
-    grid-area: left-menu; }
-  .wrapper__fotter {
-    border: 2px solid red;
-    grid-area: fotter; }
+  border: 1px solid red;
+  margin: 0 auto;
+}
+
+.wrapper__header {
+  border: 1px solid green;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+}
+
+.wrapper__content {
+  border: 1px solid green;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+}
+
+.wrapper__left-menu {
+  border: 1px solid green;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: left-menu;
+}
+
+.wrapper__right-menu {
+  border: 1px solid green;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: right-menu;
+}
+
+.wrapper__footer {
+  border: 1px solid green;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+}
+
+.gridstyle {
+  background: linear-gradient(120deg, #04041a, #1e323f, #152631, #1e323f, #04041a) no-repeat;
+}
+
+.logo {
+  background-image: url(../img/logotipe.png);
+  display: block;
+  width: 100%;
+}

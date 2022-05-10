@@ -64,5 +64,5 @@ function defaultTask(cb) {
 exports.default = defaultTask
 _____________________________________________
 npm install -g autoprefixer
-postcss ./css/main.css --use postcss-import --use autoprefixer --output ./styles
-.css
+postcss ./css/style.css --use postcss-import --use autoprefixer --no-map --output .css
+postcss ./css/style.css --output ./styles.css

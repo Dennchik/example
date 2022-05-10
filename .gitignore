@@ -8,7 +8,7 @@ idea/
 .idea/
 .gitignore
 .gitattributes
-
+gulpfile.js
 # ignore a single file
 mycode.class
 
@@ -20,6 +20,7 @@ mycode.class
 
 # add an exception (using !) to the preceding rule to track a specific file
 !package.json
+!package-lock.json
 
 # Но отслеживать файл lib.a даже если он подпадает под исключение выше
 !lib.a
